@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -39,18 +42,12 @@
             </li>
 
             <li class="nav__item">
-              <a href="#activity" class="nav__link">
-                <i class="bx bx-photo-album nav__icon"></i>
-                <span class="nav__name">Aktivitas</span>
-              </a>
-            </li>
-
-            <li class="nav__item">
               <a href="#struktur" class="nav__link">
                 <i class="bx bx-group nav__icon"></i>
                 <span class="nav__name">Struktur</span>
               </a>
             </li>
+
             <li class="nav__item">
               <a href="#contact" class="nav__link">
                 <i class="bx bx-message-square-detail nav__icon"></i>
@@ -89,6 +86,7 @@
             <div class="div wave" style="height: 500px;">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="z-index: 9999px;"><path fill="#0B111E" fill-opacity="1" d="M0,192L48,165.3C96,139,192,85,288,90.7C384,96,480,160,576,192C672,224,768,224,864,197.3C960,171,1056,117,1152,128C1248,139,1344,213,1392,250.7L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
             </div>
+          </section>
       <!-- end header -->
         <!-- start About -->
         <section id="about">
@@ -113,26 +111,83 @@
         
 
         <!-- start aktivitas -->
-      <section id="#activity">
-        <section id="activity">
+      <section id="#struktur">
+        <section id="struktur">
           <div class="container">
             <div class="row mb-3">
                 <div class="col">
-                    <h2>AKTIVITAS</h2>
+                    <h2 class="struk">Struktur</h2>
                 </div>
             </div>
             <div class="row justify-content-center fs-5 text-center">
-                <div class="col-md-4">
+                <div class="col-md-2">
                     </div>
-                      <div class="col-md-8">
+                      <div class="col-md-10">
+                        <h1 class="level-1 rectangle" style="color: #333333;">Ketua : Muhammad Ibnu</h1>
+                        <ol class="level-2-wrapper">
+                          <li>
+                            <h2 class="level-2 rectangle" style="color: #333333;">Bendahara: Qoka Busyrol Munawar</h2>
+                          </li>
+                          <li>
+                            <h2 class="level-2 rectangle"  style="color: #333333;">Sekretaris : Faris Nurcholis</h2>
+                          </li>
+                        </ol>       
+                        <ol class="level-2-wrapper">
+                          <li>
+                            <ol class="level-3-wrapper">
+                              <li>
+                                <h3 class="level-3 rectangle" style="color: #333333;">Helmy</h3>
+                              </li>
+                              <li>
+                                <h3 class="level-3 rectangle" style="color: #333333;">Helmy</h3>
+                              </li>
+                            </ol>
+                          </li>
+                          <li>
+                            <ol class="level-3-wrapper">
+                              <li>
+                                <h3 class="level-3 rectangle" style="color: #333333;">Helmy</h3>
+                              </li>
+                              <li>
+                                <h3 class="level-3 rectangle" style="color: #333333;">Helmy</h3>
+                              </li>
+                          </ol>
+                        </li>
+                        </ol>                                        
                   </div>
                 </div>
               </div>
             </div>
       </section>
-      </section>
-
         <!-- akhir aktivitas -->
+          <!-- start contact -->
+          <section class="contact section" id="contact">
+            <span class="section__subtitle">akademi lisium</span>
+            <h3 class="section__title">Kontak saya</h3>
+    
+            <div class="contact__container container grid">
+              <div class="contact__content">
+                <h3 class="contact__title">Kirimkan pesan kepada saya</h3>
+                <form action="" class="contact__form" id="contact-form">
+                  <div class="contact__form-div">
+                    <label for="" class="contact__form-tag">Nama</label>
+                    <input type="text" name="user_name" placeholder="Insert Your Name!" class="contact__form-input" id="contact-name" />
+                  </div>
+                  <div class="contact__form-div">
+                    <label for="" class="contact__form-tag">Email</label>
+                    <input type="text" name="user_email" placeholder="Insert Your Email!" class="contact__form-input" id="contact-email" />
+                  </div>
+                  <div class="contact__form-div contact__form-area">
+                    <label for="" class="contact__form-tag">Kritik & Saran</label>
+                    <textarea cols="30" rows="10" name="user_project" placeholder="Insert Your Project!" class="contact__form-input" id="contact-project"></textarea>
+                  </div>
+                  <p class="contact__message" id="contact-message"></p>
+                  <button class="button">Kirim Pesan!</button>
+                </form>
+            </div>
+            </div>
+          </section>
+          <!-- end contact -->
     <!-- cursor start -->
     <div class="cursor-dot" data-cursor-dot></div>
     <div class="cursor-outline" data-cursor-outline></div>

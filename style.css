@@ -18,6 +18,16 @@
   --text-color-light: hsl(var(--second-hue), 4%, 55%);
   --body-color: hsl(var(--second-hue), 48%, 8%);
   --container-color: hsl(var(--second-hue), 32%, 12%);
+  --level-1: #8dccad;
+
+  --level-2: #f5cc7f;
+
+  --level-3: #7b9fe0;
+
+  --level-4: #f27c8d;
+
+  --black: black;
+
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -63,7 +73,6 @@
 html {
   scroll-behavior: smooth;
   width: 100%;
-  height: 50000px;
 }
 
 body,
@@ -396,11 +405,13 @@ img {
 /* akhir about */
 
 /* start  aktivitas */
-#activity {
-  background-color: #f4f5fb;
-  padding-bottom: 1000px;
+ol {
+  list-style: none;
 }
-#activity h2 {
+#struktur {
+  background-color: #f4f5fb;
+}
+#struktur .struk {
   font-weight: 800;
   font-family: 'Poppins' sans-serif;
   color: #333333;
@@ -408,8 +419,272 @@ img {
   margin-bottom: 30px;
   font-size: 50px;
 }
-/* end aktivitas */
+.rectangle {
+  position: relative;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+.level-1 {
+  width: 50%;
+  margin: 0 auto 40px;
+  background: #f4f5fb;
+}
 
+.level-1::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background: var(--black);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.level-2-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.level-2-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background: var(--black);
+}
+.level-2-wrapper::after {
+  display: none;
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+  width: calc(100% + 20px);
+  height: 2px;
+  background: var(--black);
+}
+.level-2-wrapper li {
+  position: relative;
+}
+.level-2-wrapper > li::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background: var(--black);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.level-2 {
+  width: 70%;
+  margin: 0 auto 40px;
+  background: #f4f5fb;
+}
+
+.level-2::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background: var(--black);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.level-2::after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-100%, -50%);
+  width: 20px;
+  height: 2px;
+  background: var(--black);
+  -webkit-transform: translate(-100%, -50%);
+  -moz-transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
+  -o-transform: translate(-100%, -50%);
+}
+.level-3-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+.level-3 {
+  margin-bottom: 20px;
+  background: #f4f5fb;
+}
+
+/* responsove struktur */
+@media screen and (max-width: 700px) {    
+  .rectangle {
+    padding: 20px 10px;
+  }
+  .level-1,
+  .level-2 {
+    width: 100%;
+  }
+  .level-1 {
+    margin-bottom: 20px;
+  }
+  .level-1::before,
+  .level-2-wrapper > li::before {
+    display: none;
+  }
+  .level-2-wrapper,
+  .level-2-wrapper::after,
+  .level-2::after {
+    display: block;
+  }
+  /* .level-2-wrapper {
+    width: 90%;
+    margin-left: 10%;
+  } */
+  .level-2-wrapper::before {
+    left: -20px;
+    width: 2px;
+    height: calc(100% + 40px);
+  }
+  .level-2-wrapper > li:not(:first-child) {
+    margin-top: 50px;
+  }
+}
+/* end Struktur */
+
+/* contact */
+#contact {
+  background-color: #f4f5fb;
+}
+#contact h2 {
+  font-weight: 800;
+  font-family: 'Poppins' sans-serif;
+  color: #333333;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+.contact__container {
+  row-gap: 3rem;
+  margin-bottom: 3rem;
+}
+.contact__title {
+  text-align: center;
+  font-size: var(--h3-font-size);
+  margin-bottom: 1.5rem;
+}
+.contact__info {
+  display: grid;
+  gap: 1rem;
+}
+.contact__card {
+  background-color: var(--container-color);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  text-align: center;
+}
+
+.contact__card-icon {
+  font-size: 2rem;
+  color: var(--title-color);
+  margin-bottom: 0.25rem;
+}
+.contact__card-title,
+.contact__card-data {
+  font-size: var(--small-font-size);
+}
+.contact__card-title {
+  font-weight: var(--font-medium);
+}
+
+.contact__card-data {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.contact__button {
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.25rem;
+}
+
+.contact__button:hover .contact__button-icon {
+  transform: translateX(0.25rem);
+}
+
+.contact__button-icon {
+  font-size: 1rem;
+  transition: 0.4s;
+}
+
+.contact__form-div {
+  position: relative;
+  margin-bottom: 2rem;
+  height: 4rem;
+}
+.contact__form-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--text-color-light);
+  background: none;
+  color: var(--text-color);
+  outline: none;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  z-index: 1;
+}
+
+.contact__form-tag {
+  position: absolute;
+  top: -0.75rem;
+  left: 1.25rem;
+  font-size: var(--smaller-font-size);
+  padding: 0.25rem;
+  /* background-color: var(--body-color); */
+  color: #333333;
+  z-index: 10;
+}
+
+.contact__form-area {
+  height: 11rem;
+}
+
+.contact__form-area textarea {
+  resize: none;
+}
+
+.contact__message {
+  font-size: var(--small-font-size);
+  position: absolute;
+  bottom: 2.8rem;
+  left: 1.5rem;
+}
+/* akhir contact */
 
 /*=============== MEDIA QUERIES ===============*/
 /* For small devices */
@@ -432,6 +707,14 @@ img {
     width: 0px;
     left: 0;
     right: 0;
+    margin: 0 auto;
+  }
+  .contact__info {
+    grid-template-columns: 300px;
+    justify-content: center;
+  }
+  .contact__form {
+    width: 360px;
     margin: 0 auto;
   }
 }
@@ -471,6 +754,9 @@ img {
   }
   .nav {
     height: calc(var(--header-height)+1rem);
+  }
+  .contact__container {
+    column-gap: 6rem;
   }
   .bd-grid {
     margin-left: auto;
