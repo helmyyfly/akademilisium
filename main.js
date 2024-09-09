@@ -12,3 +12,11 @@ window.addEventListener("mousemove", function (e) {
     cursorOutline.style.left = `${posX}px`;;
     cursorOutline.style.top = `${posY}px`;
 });
+
+// data contact
+
+var x = 5;
+var y = 6;
+var z = x + y;
+document.getElementById("contact-name").innerHTML =
+"The value of z is: " + z;
